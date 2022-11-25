@@ -1,10 +1,17 @@
 package level_2;
 
+import java.util.Scanner;
+
 public class Baekjoon_2884_알람시계 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int H = scan.nextInt();
+		int M = scan.nextInt();
+		
+		
 	}
 
 }
