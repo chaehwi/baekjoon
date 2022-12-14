@@ -11,10 +11,10 @@ public class Baekjoon_2884_알람시계 {
 		int H = scan.nextInt();
 		int M = scan.nextInt();
 
-//		if (H == 0) {
+//		if (H == 0) { 
 //			H = 24;
 //			if (M >= 45) {
-//				M -= 45;
+//				M -= 45; 
 //			} else {
 //				H --;
 //				M = 60 - (45 - M);
@@ -27,6 +27,7 @@ public class Baekjoon_2884_알람시계 {
 //				M = 60 - (45 - M);
 //			}
 //		}
+		// => H가 0이고 M이 45보다 클 때 H가 24로 저장됨
 		
 		if(M < 45) {
 			M = 60 -(45-M);
