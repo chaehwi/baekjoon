@@ -1,4 +1,4 @@
-package level3_반복문;
+package level_3_반복문;
 
 import java.util.Scanner;
 

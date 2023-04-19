@@ -1,4 +1,4 @@
-package level3_반복문;
+package level_3_반복문;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Baekjoon_2438_별찍기1 {
+public class Baekjoon_11021_AB7 {
 
 	public static void main(String[] args)throws IOException {
 		
@@ -17,11 +17,9 @@ public class Baekjoon_2438_별찍기1 {
 		int N = Integer.parseInt(br.readLine());
 		
 		for(int i = 1; i <= N; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
 			
-			for(int j = 1; j <= i; j++) {
-				bw.write("*");
-			}
-			bw.write("\n");
+			bw.write("Case #" + i + ": " + (Integer.parseInt(st.nextToken())+ Integer.parseInt(st.nextToken()))+ "\n");
 		}
 		
 		bw.close();
