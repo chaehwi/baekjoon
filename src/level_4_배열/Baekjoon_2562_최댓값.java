@@ -20,7 +20,7 @@ public class Baekjoon_2562_최댓값 {
 		int max = num[0];
 		int seq = 0;
 
-		for (int j = 1; j < num.length; j++) {
+		for (int j = 0; j < num.length; j++) {
 
 			if (num[j] > max) {
 				max = num[j];
