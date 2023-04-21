@@ -14,28 +14,22 @@ public class Baekjoon_10810_공넣기 {
 		
 		int [] Narr = new int[N];
 		
-		int[] n1 = new int[M];
-		int[] n2 = new int[M];
-		int[] k = new int[M];
-
-		
-		for(int j = 0; j < Narr.length; j++) {
-			
-			Narr[j] = j + 1; // 바구니 번호 지정 
-			
-		}
-		
-		
 		
 		for (int i = 0; i < M; i++) {
 
-			n1[i] = scan.nextInt();
-			n2[i] = scan.nextInt();
-			k[i] = scan.nextInt();
+			int n1 = scan.nextInt(); // n1부터 n2까지 k번의 공을 넣겠다
+			int n2 = scan.nextInt();
+			int k = scan.nextInt();
 			
-			
-
+			for(int j = n1 -1; j < n2; j++) {
+				Narr[j] = k;
+			}
 		}
+		
+		for(int a = 0; a < Narr.length; a++) {
+			System.out.print(Narr[a] + " ");
+		}
+		
 		
 
 	}
