@@ -35,9 +35,12 @@ public class Baekjoon_10811_바구니뒤집기 {
 			 int I = Integer.parseInt(st.nextToken());
 			 int J = Integer.parseInt(st.nextToken());
 			 
-			 for(int k = I - 1; k < J - I; k++) {
-				 
-				 Narr[k] = J;
+			 while(I < J) {
+				 int temp = Narr[I - 1];
+				 Narr[I - 1] = Narr[J - 1];
+				 Narr[J - 1] = temp;
+				 I++;
+				 J--;
 			 }
 		 }
 		 
