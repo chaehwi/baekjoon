@@ -1,27 +1,20 @@
 package level_5_문자;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Baekjoon_11654_아스키코드 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		Scanner scan = new Scanner(System.in);
+//		Scanner scan = new Scanner(System.in);
+//		
+//		int T = scan.next().charAt(0);
+//		
+//		System.out.println(T);
 		
-		int T = scan.nextInt();
+		int t = System.in.read();
 		
-		for(int i = 0; i < T; i++) {
-			
-			String S = scan.next();
-			
-			char f = S.charAt(0);
-			char l = S.charAt(S.length()-1);
-			
-			System.out.println(f +""+ l);
-		}
-		
-		
-		
-		
+		System.out.println(t);
 	}
 }
