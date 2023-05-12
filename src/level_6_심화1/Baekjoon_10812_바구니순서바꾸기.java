@@ -24,7 +24,8 @@ public class Baekjoon_10812_바구니순서바꾸기 {
 		int N = sc.nextInt(); // 바구니의 개수
 		int M = sc.nextInt(); // 회전 순서
 		
-		int[] Narr = new int[N];
+		int[] Narr = new int[N]; // 바구니 배열
+		int[] newNarr = new int[N]; // 결과 바구니 배열
 		
 		// 바구니에 번호 부여하기
 		for(int i = 0; i < N; i++) {
@@ -32,13 +33,38 @@ public class Baekjoon_10812_바구니순서바꾸기 {
 		}
 
 		// I, K, J 
-		for(int i = 0; i < M; i++) {
-			int I = sc.nextInt(); // I번째 바구니부터
-			int J = sc.nextInt(); // K번째 바구니까지
-			int K = sc.nextInt(); // 기준 바구니는 J
+		for(int b = 0; b < M; b++) {
+			int i = sc.nextInt()-1; // I번째 바구니부터
+			int j = sc.nextInt()-1; // K번째 바구니까지
+			int k = sc.nextInt()-1; // 기준 바구니는 J
+			
+			 // i를 기준으로 반복문을 돌려야 하기에 따로 저장
+            int i1 = i;
+
+            // 바구니가 바뀌는 횟수
+            for(int c = 0; c < j-i+1; c++){
+                // k부터 j까지
+                if(c+k <= j){
+                	newNarr[c+i] = Narr[c+k];
+                }
+                // i부터 k까지
+                else {
+                	newNarr[c+i] = Narr[i1];
+                    i1++;
+                }
+            }
+
+            // 회전 범위에 속하지 않을 경우
+            for(int d = 0; d < N; d++){
+                if(newNarr[d] != 0){ 
+                	Narr[d] = newNarr[d];
+                }
+            }
 		}
 		
-		
+		for(int e = 0; e<Narr.length; e++){
+            System.out.print(Narr[e]+" ");
+        }
 		
 		
 	}
